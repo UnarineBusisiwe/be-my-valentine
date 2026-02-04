@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop autoplay>
+    <source src="music.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <h1>You’re My Valentine 💕</h1>
+    <p>
+        Thank you for choosing me.  
+        I choose you today, tomorrow, and always.  
+        I can’t wait to create more beautiful memories with you 💖
+    </p>
+
+    <p class="signature">– Your Girl 💕</p>
+</div>
+
+<button class="music-btn" onclick="toggleMusic()">⏸ / ▶</button>
+
+<script>
+    const music = document.getElementById("bgMusic");
+
+    window.onload = () => {
+        music.play().catch(() => {});
+    };
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
+    }
+</script>
+
+</body>
+</html>
